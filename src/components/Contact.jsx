@@ -21,7 +21,10 @@ const Contact = () => {
               </span>
               <div>
                 <p className="font-bold">Address</p>
-                <p>0665 Broadway NY, 10001 USA</p>
+                <p>
+                  Springdale Public School, 123 Education Lane, Cityville,
+                  State, ZIP Code
+                </p>
               </div>
             </div>
             <div className="flex items-center mb-4">
@@ -30,7 +33,7 @@ const Contact = () => {
               </span>
               <div>
                 <p className="font-bold">Phone</p>
-                <p>855 100 4444</p>
+                <p>1 (123) 456-7890</p>
               </div>
             </div>
             <div className="flex items-center">
@@ -39,7 +42,7 @@ const Contact = () => {
               </span>
               <div>
                 <p className="font-bold">e-Mail</p>
-                <p>info@barber.com</p>
+                <p>info@springdale.edu</p>
               </div>
             </div>
           </div>
@@ -86,6 +89,14 @@ const Contact = () => {
             </button>
           </form>
         </div>
+      </div>
+      <div className=" m-5 border-2 border-gray-200 rounded-lg p-1">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387194.062430472!2d-74.30933728043162!3d40.697019259110355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1722790070190!5m2!1sen!2sin"
+          className="w-full h-96 rounded-lg"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
       <Footer />
     </>
