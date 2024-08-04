@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Avatar } from "@material-tailwind/react";
 import gsap from "gsap";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import { Button } from "@material-tailwind/react";
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,19 +26,28 @@ const Home = () => {
     <>
       <div className="p-4">
         <div className="flex justify-between items-center">
-          <nav>
+          <nav className="flex items-center">
             <Link to="/">
-            <Avatar
-              src="https://docs.material-tailwind.com/img/face-2.jpg"
-              alt="avatar"
-            />
+              <img
+                className="h-6 w-auto sm:h-8 md:h-10  object-contain"
+                src="/Logo.png"
+                alt="Company Logo"
+              />
             </Link>
           </nav>
-          <div className="hidden md:flex list-none gap-4">
-            <li> <Link to="/faculty">Faculty</Link></li>
-            <li>About</li>
-            <li>Schools</li>
-            <li>Staff</li>
+          <div className="hidden md:flex list-none gap-4 ">
+            <Button variant="gradient" color="teal" className="rounded-full">
+              <Link to="/">Home</Link>
+            </Button>
+            <Button variant="gradient" color="teal" className="rounded-full">
+              <Link to="/faculty">Faculty</Link>
+            </Button>
+            <Button variant="gradient" color="teal" className="rounded-full">
+              <Link to="/gallery">Gallery</Link>
+            </Button>
+            <Button variant="gradient" color="teal" className="rounded-full">
+              <Link to="/contact">Contact Us!</Link>
+            </Button>
           </div>
           <button
             className="md:hidden text-2xl"
@@ -50,13 +60,33 @@ const Home = () => {
         {isMenuOpen && (
           <div
             ref={menuRef}
-            className="md:hidden mt-4 bg-teal-400 text-black p-3 rounded-lg"
+            className="md:hidden mt-4 text-black p-3 rounded-lg"
           >
-            <ul className="list-none flex flex-col gap-2">
-              <li>Faculty</li>
-              <li>About</li>
-              <li>Schools</li>
-              <li>Staff</li>
+            <ul className="list-none flex flex-col bg-[#F0EFEA] shadow-2xl rounded-lg p-4 gap-2">
+              <Button variant="gradient" color="teal" className="rounded-full text-left">
+                <Link to="/">Home</Link>
+              </Button>
+              <Button
+                variant="gradient"
+                color="teal"
+                className="rounded-full text-left"
+              >
+                <Link to="/faculty">Faculty</Link>
+              </Button>
+              <Button
+                variant="gradient"
+                color="teal"
+                className="rounded-full text-left"
+              >
+                <Link to="/gallery">Gallery</Link>
+              </Button>
+              <Button
+                variant="gradient"
+                color="teal"
+                className="rounded-full text-left"
+              >
+                <Link to="/contact">Contact Us!</Link>
+              </Button>
             </ul>
           </div>
         )}

@@ -2,6 +2,7 @@ import React from "react";
 import { Tooltip, Button } from "@material-tailwind/react";
 import Home from "./Home";
 import { motion } from "framer-motion";
+import Footer from "./Footer";
 
 const TeamSection = () => {
   const containerVariants = {
@@ -161,7 +162,7 @@ const TeamSection = () => {
             <span className="text-amber-500 text-sm sm:text-base md:text-lg font-semibold mb-3 md:mb-4 kanit-regular">
               Life At Springdale:
             </span>
-            <span className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl kanit-medium">
+            <span className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl kanit-regular">
               Student Council:
               <br />
               President: Amy Parker, Grade 12
@@ -184,7 +185,7 @@ const TeamSection = () => {
             <span className="text-amber-500 text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 md:mb-3 kanit-regular">
               Activities:
             </span>
-            <span className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl kanit-medium">
+            <span className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl kanit-regular">
               Extracurricular Activities: Music, Drama, Art, Sports, Robotics.
               <br />
               <br />
@@ -213,6 +214,7 @@ const TeamSection = () => {
           </motion.div>
         </motion.div>
       </motion.div>
+      <Footer/>
     </>
   );
 };

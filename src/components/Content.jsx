@@ -13,6 +13,7 @@ import {
   Button,
 } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
+import Footer from "./Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -74,26 +75,29 @@ const Content = () => {
   return (
     <>
       <Home />
+
       <div
         ref={sectionRef}
         className="flex justify-center items-center flex-col text-center px-4 py-8 md:py-12 lg:py-16 md:flex-row lg:flex-row "
       >
         <div
           ref={textRef}
-          className="flex flex-col items-center text-center text-lg  mb-4 md:mb-6 lg:mb-8 max-w-2xl"
+          className="flex flex-col items-center text-center text-lg mb-4 md:mb-6 lg:mb-8 max-w-2xl"
         >
-          <p className="font-extrabold mb-2 sm:text-xl md:text-2xl lg:text-3xl  md:mb-4">
+          <p className="font-extrabold mb-2 sm:text-xl md:text-2xl lg:text-3xl md:mb-4">
             Welcome to Springdale Public School, where your CHILD grows
           </p>
+
           <p className="mb-6 md:mb-8">
             "We nurture young minds for a brighter future."
           </p>
+
           <div className="flex flex-col md:flex-row justify-center items-center gap-3 mt-2 md:mt-4">
             <button className="bg-black text-white px-6 py-2 rounded-3xl w-auto text-base md:text-lg">
-              Contact Us!
+            <Link to="/contact">Contact Us!</Link>
             </button>
             <button className="text-black w-auto text-base md:text-lg">
-              About Us!
+              <a href="#about">About Us!</a>
             </button>
           </div>
         </div>
@@ -105,6 +109,7 @@ const Content = () => {
           className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl"
         />
       </div>
+
       <div className="flex text-center text-lg font-semibold justify-center mb-6 sm:text-xl md:text-2xl lg:text-3xl">
         <p>A Glimpse of Events and activities we conduct</p>
       </div>
@@ -135,7 +140,8 @@ const Content = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#130E0B] py-8 md:py-12 gap-4 lg:py-16 mt-5">
+
+      <div id="about" className="bg-[#130E0B] py-8 md:py-12 gap-4 lg:py-16 mt-5 kanit-regular">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row md:flex-row items-start justify-between gap-8 font-poppins">
             <div className="w-full md:w-1/2">
@@ -156,7 +162,8 @@ const Content = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row md:flex-row items-start justify-between gap-10 font-poppins">
+
+          <div className="flex flex-col sm:flex-row md:flex-row items-start justify-between gap-10 font-poppins mt-8">
             <div className="w-full md:w-1/2 flex justify-center md:justify-start">
               <img
                 className="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 lg:w-64 lg:h-64 object-contain"
@@ -164,7 +171,6 @@ const Content = () => {
                 alt="Black box illustration"
               />
             </div>
-
             <div className="w-full mt-7 md:w-1/2">
               <p className="text-amber-500 font-bold text-xs md:text-base mb-2">
                 Vision:
@@ -175,13 +181,14 @@ const Content = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col  sm:flex-row mt-7 md:flex-row items-start justify-between gap-8 font-poppins">
+
+          <div className="flex flex-col sm:flex-row mt-8 md:flex-row items-start justify-between gap-8 font-poppins">
             <div className="w-full md:w-1/2">
               <p className="text-amber-500 font-bold text-xs md:text-base mb-2">
-              Mission:
+                Mission:
               </p>
               <p className="text-white font-bold text-xl sm:text-lg md:text-xl lg:text-3xl leading-tight">
-              To empower students with the knowledge, skills, and values needed to thrive in a dynamic world
+                To empower students with the knowledge, skills, and values needed to thrive in a dynamic world
               </p>
             </div>
             <div className="w-full md:w-1/2 flex justify-center md:justify-end">
@@ -194,6 +201,7 @@ const Content = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };
